@@ -52,7 +52,7 @@ export default class BookList extends Component {
         书籍列表:
         <ul>
           {this.state.bookData.map((item) => (
-            <BookItem book={item} onScore={this.handleScore} />
+            <BookItem key={item.title} book={item} onScore={this.handleScore} />
           ))}
         </ul>
       </div>
