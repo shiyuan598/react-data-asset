@@ -2,7 +2,7 @@ import React from "react";
 
 export default function BookItem(props) {
   const handleClick = () => {
-    props.handleClick(props.book.id);
+    props.onScore(props.book.id);
   };
   const { book } = props;
   return (
