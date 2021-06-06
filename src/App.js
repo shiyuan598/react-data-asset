@@ -22,7 +22,8 @@ function App() {
         >
           Learn React
         </a>
-        <BookList/>
+        <div className="pink">Pink in APP</div>
+        <BookList />
         <div onClick={handleClick}>click</div>
       </header>
     </div>

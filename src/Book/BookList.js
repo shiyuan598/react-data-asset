@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import BookItem from "./BookItem";
+import bookStyle from "./Book.css";
 
 export default class BookList extends Component {
   constructor(props) {
@@ -49,6 +50,7 @@ export default class BookList extends Component {
   render() {
     return (
       <div>
+          <div className={bookStyle.pink}>Pink in BookList</div>
         书籍列表:
         <ul>
           {this.state.bookData.map((item) => (
