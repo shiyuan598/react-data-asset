@@ -9,6 +9,7 @@ export default class BookList extends Component {
       bookData: []
     };
     this.handleScore = this.handleScore.bind(this);
+    this.handleSave = this.handleSave.bind(this);
   }
   componentDidMount() {
     this.setState({
@@ -47,14 +48,26 @@ export default class BookList extends Component {
       bookData
     });
   }
+
+  handleSave(book) {
+    const bookData = this.state.bookData.map((item) => {
+      const newItem =
+        item.id === book.id ? book : item;
+      return newItem;
+    });
+    this.setState({
+      bookData
+    });
+  }
+  
   render() {
     return (
       <div>
-          <div className={bookStyle.pink}>Pink in BookList</div>
+        <div className={bookStyle.pink}>Pink in BookList</div>
         书籍列表:
         <ul>
           {this.state.bookData.map((item) => (
-            <BookItem key={item.title} book={item} onScore={this.handleScore} />
+            <BookItem key={item.title} book={item} onScore={this.handleScore} onSave={this.handleSave} />
           ))}
         </ul>
       </div>
