@@ -32,4 +32,5 @@ export default function reducer(state = [], action) {
     default:
       break;
   }
+  return state;
 }
