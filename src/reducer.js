@@ -1,4 +1,10 @@
-export default function reducer(state = [], action) {
+export default function reducer(
+  state = {
+    courses: [],
+    todos: []
+  },
+  action
+) {
   switch (action.type) {
     case "TODO_ADD":
       return [
@@ -10,7 +16,7 @@ export default function reducer(state = [], action) {
         }
       ];
     case "TODO_DONE":
-        console.info(state, action);
+      console.info(state, action);
       state.forEach((item) => {
         if (item.id === action.id) {
           item.done = action.done;
