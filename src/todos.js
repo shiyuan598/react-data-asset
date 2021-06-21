@@ -3,7 +3,7 @@ import ToDo from "./todo";
 import { useSelector } from "react-redux";
 
 export default function ToDos() {
-  let data = useSelector((state) => state);
+  const data = useSelector((state) => state);
   return (
     <ul className="todo-list">
       {

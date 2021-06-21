@@ -70,6 +70,7 @@
   cursor: pointer;
   height: 30px;
   line-height: 30px;
+  padding-left: 5px;
 }
 .display div {
   height: 30px;
@@ -84,4 +85,12 @@
 }
 .display .todo-destory:hover {
   font-weight: 700;
+}
+
+.edit {
+    height: 30px;
+    line-height: 30px;
+}
+.number{
+    font-weight: 700;
 }
