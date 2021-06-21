@@ -5,11 +5,12 @@ export default function reducer(state = [], action) {
         ...state,
         {
           id: Date.now(),
-          title: action.tile,
+          title: action.title,
           done: false
         }
       ];
     case "TODO_DONE":
+        console.info(state, action);
       state.forEach((item) => {
         if (item.id === action.id) {
           item.done = action.done;
@@ -26,7 +27,7 @@ export default function reducer(state = [], action) {
     case "TODO_REMOVE":
       state = state.filter((item) => item.id !== action.id);
       return state;
-      case "TODO_REMOVE_DONE":
+    case "TODO_REMOVE_DONE":
       state = state.filter((item) => !item.done);
       return state;
     default:

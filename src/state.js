@@ -6,10 +6,7 @@ export default function State() {
         <span className="number">2</span>
         <span className="word">项待完成</span>
       </span>
-      <span className="todo-clear">
-        <span className="number">2</span>
-        <span className="word">已完成事项</span>
-      </span>
+      <span className="todo-clear">已完成事项</span>
     </div>
   );
 }

@@ -36,3 +36,52 @@
     transform: rotate(360deg);
   }
 }
+
+#todoApp {
+  margin-left: 55px;
+}
+#todoApp ul,
+#todoApp li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#create-todo {
+  /* background-color: #eee; */
+  height: 60px;
+  line-height: 60px;
+}
+/* .todo-list {
+    background-color: #61dafb;
+} */
+.todo {
+  display: flex;
+  background-color: #eee;
+  padding: 15px 0;
+  margin: 10px 0;
+}
+.display {
+  display: flex;
+  align-items: center;
+  background-color: #eee;
+}
+.display .todo-content {
+  color: #1e90ff;
+  cursor: pointer;
+  height: 30px;
+  line-height: 30px;
+}
+.display div {
+  height: 30px;
+  line-height: 30px;
+}
+.display .todo-destory {
+  color: #f40;
+  font-size: 20px;
+  cursor: pointer;
+  width: 30px;
+  text-align: center;
+}
+.display .todo-destory:hover {
+  font-weight: 700;
+}
