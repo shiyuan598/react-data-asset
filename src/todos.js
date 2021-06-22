@@ -1,0 +1,14 @@
+import React from "react";
+import ToDo from "./todo";
+import { useSelector } from "react-redux";
+
+export default function ToDos() {
+  let data = useSelector((state) => state.todos);
+  return (
+    <ul className="todo-list">
+      {
+          data.map(item=>(<ToDo key={item.id} {...item} />))
+      }
+    </ul>
+  );
+}
